@@ -1,0 +1,9 @@
+crowdposetools==2.0
+matplotlib==3.4.1
+opencv-python==4.5.2.52
+pycocotools==2.0.2
+scikit-image==0.18.2
+scipy==1.6.3
+tensorboard==2.5.0
+tqdm==4.60.0
+yacs==0.1.8
