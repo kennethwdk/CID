@@ -83,7 +83,7 @@ python tools/infer_coco_testdev.py --cfg experiments/coco.yaml --gpus 0,1 TEST.M
 python tools/valid.py --cfg experiments/crowdpose.yaml --gpus 0,1 TEST.MODEL_FILE model/crowdpose/checkpoint.pth.tar
 
 # evaluate on ochuman test set with 2 gpus (trained on ochuman val set)
-python tools/valid.py --cfg experiments/ochuman.yaml --gpus 0,1 TEST.MODEL_FILE model/ochuman/checkpoint.pth.tar
+python tools/valid.py --cfg experiments/ochuman_val.yaml --gpus 0,1 TEST.MODEL_FILE model/ochuman/checkpoint.pth.tar
 
 # evaluate on ochuman test set with 2 gpus (trained on coco train set)
 python tools/valid.py --cfg experiments/ochuman_coco.yaml --gpus 0,1 TEST.MODEL_FILE model/coco/checkpoint.pth.tar
@@ -103,7 +103,7 @@ python tools/train.py --cfg experiments/coco.yaml --gpus 0,1
 python tools/train.py --cfg experiments/crowdpose.yaml --gpus 0,1
 
 # train on ochuman with 2 gpus
-python tools/train.py --cfg experiments/ochuman.yaml --gpus 0,1
+python tools/train.py --cfg experiments/ochuman_val.yaml --gpus 0,1
 ```
 
 The experimental results are obtained by training on two NVIDIA RTX 3090. You can use more gpu cards for model training by specifying gpu ids in `--gpus` optition, *e.g.*, training model on crowdpose on 8 gpu cards by
